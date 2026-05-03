@@ -7,25 +7,31 @@ extends Node2D
 #var texto_npc: String = "Cuidado perigo a frente "
 #var lampada: bool = true
 
-var hp: int = 3
+var hp: int = 1
 var mana: float = 100.00
 var nome_player: String = "Fernando"
 var espada: bool = false
 
-#funcao ready e executado  1 unica vez quando a cena foi carregada dentro do jogo  
+#funcao ready e chamada e executado  1 unica vez quando a cena foi carregada dentro do jogo  
 func _ready():
-    print(hp)
-    nome_jogador()
+    if hp == 3:
+        print("jogador vida cheia ")
+    elif hp == 2:
+        print("jodagor vida metade")
+    elif hp == 1:
+        print("jogador vida fraca")
+    else:
+        print("jogador morreu")
 
-# função process e executado 30 vezes por segundo quando a cena e carregada dentro do jogo (usado para botao, contador de tempo e vida  )
+# função process e chamada e executado 30 vezes por segundo quando a cena e carregada dentro do jogo (usado para botao, contador de tempo e vida  )
 func _process(_delta):
     pass
     #pass ignora a função
 
-#função physics porcess e executado 30 vezes por segundo mas e indicado para simulacão fisicas do jogo (forca, impacto, vento , gravidade )
+#função physics porcess e chamda e executado 30 vezes por segundo mas e indicado para simulacão fisicas do jogo (forca, impacto, vento , gravidade )
 func _physics_process(_delta):
     pass
 
-#pode ser criada sua propria função , ela tem que ser chamada pelo código , se não ela não e carregada na cena 
+#pode ser criada sua propria função pode ser chamada no ready ou process , ela tem que ser chamada pelo código , se não ela não e carregada na cena 
 func nome_jogador():
     print("escolha seu nome")
