@@ -4,3 +4,26 @@
 
 [node name="Node2D" type="Node2D" unique_id=734540530]
 script = ExtResource("1_wtcfe")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=563135207]
+offset_right = 1152.0
+offset_bottom = 646.0
+color = Color(0, 0, 0, 1)
+
+[node name="titulo" type="Label" parent="." unique_id=1645726838]
+offset_left = 392.0
+offset_top = 121.0
+offset_right = 809.0
+offset_bottom = 286.0
+theme_override_colors/font_color = Color(0.31029186, 0.85057783, 0.36837617, 1)
+theme_override_font_sizes/font_size = 120
+text = "Output"
+
+[node name="texto" type="Label" parent="." unique_id=550546894]
+offset_left = 415.0
+offset_top = 351.0
+offset_right = 598.0
+offset_bottom = 461.0
+theme_override_colors/font_color = Color(0.8901961, 0, 0.17254902, 1)
+theme_override_font_sizes/font_size = 80
+text = "1234"

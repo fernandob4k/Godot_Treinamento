@@ -12,20 +12,27 @@ var mana: float = 100.00
 var nome_player: String = "Fernando"
 var espada: bool = false
 
+#chama o no label texto e agora da pra mudar pelo código
+@onready var texto: Label = $texto
+@onready var titulo: Label = $titulo
+
 #funcao ready e chamada e executado  1 unica vez quando a cena foi carregada dentro do jogo  
 func _ready():
-    if hp == 3:
-        print("jogador vida cheia ")
-    elif hp == 2:
-        print("jodagor vida metade")
-    elif hp == 1:
-        print("jogador vida fraca")
-    else:
-        print("jogador morreu")
+    texto.text = "teste se funciona"
+
+    #if hp == 3:
+    #    print("jogador vida cheia ")
+    #elif hp == 2:
+    #    print("jodagor vida metade")
+    #elif hp == 1:
+    #    print("jogador vida fraca")
+    #else:
+    #    print("jogador morreu")
 
 # função process e chamada e executado 30 vezes por segundo quando a cena e carregada dentro do jogo (usado para botao, contador de tempo e vida  )
 func _process(_delta):
-    pass
+    if Input.is_action_just_pressed("ui_left"):
+        texto.text = nome_player
     #pass ignora a função
 
 #função physics porcess e chamda e executado 30 vezes por segundo mas e indicado para simulacão fisicas do jogo (forca, impacto, vento , gravidade )
